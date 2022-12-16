@@ -4,6 +4,7 @@
     --Very-dark-blue: hsl(212, 21%, 14%); 
     --Dark-grayish-blue: hsl(228, 12%, 48%); 
     --White: hsl(0, 0%, 100%);
+    --dark-green: #184131;
 }
 
 body {
@@ -15,8 +16,8 @@ body {
 .card {
     display: flex;
     background-color: var(--White);
-    width: 36vw;
-    margin: 22vh auto;
+    width: 36%;
+    margin: 20vh auto;
     border-radius: 1em;
 }
 
@@ -26,6 +27,95 @@ body {
     border-bottom-left-radius: 1em;
 }
 
+.text_container {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5em;
+    justify-content: space-between;
+}
+
+    .top_text {
+        color: var(--Dark-grayish-blue);
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    .title_text {
+        font-family: 'Fraunces', sans-serif;
+        font-size: 2.5em;
+        margin: 0;
+        line-height: 1em;
+    }
+
+    .description_text {
+        color: var(--Dark-grayish-blue);
+        line-height: 2em;
+    }
+
+    .container_price {
+        display: flex;
+        align-items: center;
+    }
+
+        .price_new {
+            color: var(--dark-cyan);
+            font-family: 'Fraunces', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .price_old {
+            color: var(--Dark-grayish-blue);
+            text-decoration: line-through;
+            margin-left: 1em;
+        }
+    
+    .button {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--White);
+        background-color: var(--dark-cyan);
+        border-radius: .5em;
+        padding: 1em;
+        width: 90%;
+        font-weight: 700;
+        border: none;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+        .cart_icon {
+            padding: 0 0.7em;
+        }
+
+    .button:active {
+        background-color: var(--dark-green);
+    }
+
+
+.mobile_image {
+    display: none;
+}
+
 .attribution {
     display: none;
 }
+
+@media screen and (max-width: 500px) {
+    .desktop_image {
+        display: none;
+    }
+
+    .mobile_image {
+        display: block;
+    }
+
+    .card {
+        flex-direction: column;
+        margin: 10vh 2vw;
+        width: auto;
+    }
+
+}
+
