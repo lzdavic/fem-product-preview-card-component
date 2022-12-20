@@ -18,7 +18,6 @@ main {
     display: grid;
     place-content: center;
     min-height: 100vh;
-    min-height: 100vh;
     background-color: var(--cream);
 }
 
@@ -109,25 +108,24 @@ main {
     display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 body {
     display: block;
 }
-
-    .desktop_image {
-        display: none;
+    main {
+        padding: 1em;
     }
-
-    .mobile_image {
+    .product_image {
         display: block;
+        border-bottom-left-radius: 0;
         border-top-left-radius: 1em;
         border-top-right-radius: 1em;
+        max-width: 100%;
     }
 
     .card {
         flex-direction: column;
-        margin: 5% 2%;
-        width: 94%;
+        width: auto;
     }
 
     .text_container {
