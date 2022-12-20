@@ -15,26 +15,36 @@
 
 </head>
 <body>
-  <section class="card">
-    <img src="images/image-product-desktop.jpg" alt="Poduct image" class="desktop_image">
-    <img src="images/image-product-mobile.jpg" alt="Poduct image" class="mobile_image">
-    <div class="text_container">
-      <p class="top_text">Perfume</p>
-
-      <h1 class="title_text">Gabrielle Essence Eau De Parfum</h1>
-
-      <p class="description_text">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-      Perfumer-Creator for the House of CHANEL.</p>
-      <div class="container_price">
-        <p class="price_new">$149.99</p>
-        <p class="price_old">$169.99</p>
+  <main>
+    <h1 class="sr-only">Product preview card</h1>
+    <section class="card">
+      <picture>
+        <source media="(min-width: 500px)" srcset="images/image-product-desktop.jpg" />
+        <img class="product_image" src="images/image-product-mobile.jpg" alt="Photo of a Gabrielle Essence bottle">
+      </picture>
+      <div class="text_container">
+        <p class="top_text">Perfume</p>
+        <h2 class="title_text">Gabrielle Essence Eau De Parfum</h2>
+        <p class="description_text">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+        <div class="container_price">
+          <p class="price_new">$149.99</p>
+          <del class="price_old"><span class="sr-only">Previous price</span>$169.99</del>
+        </div>
+        <button class="button">
+          <img 
+          class="cart_icon" 
+          src="images/icon-cart.svg" 
+          alt="" 
+          aria-hidden="true">
+          Add to Cart
+        </button>
       </div>
-      <button class="button"><img src="images/icon-cart.svg" class="cart_icon"> Add to Cart </button>
-    </div>
-  </section>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="github.com/lzdavic">Luiz Davi</a>.
-  </div>
+    </section>
+    <section class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="github.com/lzdavic">Luiz Davi</a>.
+    </section>
+  </main>
 </body>
 </html>
